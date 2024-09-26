@@ -54,11 +54,16 @@ public class BilgiEkrani extends JFrame {
 	 * Create the frame.
 	 */
 	
+	
+	
 	/*BilgiID'sine göre açıklamayı getir*/
 	public BilgiEkrani(BilgiSistemi bilgiSistemi) {
+		
+		
 		setResizable(false);//
 		this.bilgiSistemi = bilgiSistemi; // Parametre olarak gelen BilgiSistemi nesnesini sınıf düzeyindeki nesneye atadık
 		JLabel Aciklama_Gorsel = new JLabel("New label");
+		Aciklama_Gorsel.setBackground(new Color(0, 0, 0));
 		//BilgiEkrani bilgiEkrani = new BilgiEkrani();
 		
 		//bilgiSistemi.BilgiIDGonder(WIDTH);
@@ -90,42 +95,18 @@ public class BilgiEkrani extends JFrame {
 		contentPane.add(panel);
 		panel.setLayout(null);
 		
+		
+		
 		JPanel panel_1 = new JPanel();
 		panel_1.setBounds(10, 89, 435, 435);
 		panel.add(panel_1);
 		panel_1.setLayout(null);
 		
 		
+		
+		
 		Aciklama_Gorsel.setBounds(0, 0, 435, 435);
 		panel_1.add(Aciklama_Gorsel);
-		
-		JPanel panel_3 = new JPanel();
-		panel_3.setVisible(false);
-		panel_3.setBackground(new Color(255, 255, 255));
-		panel_3.setBounds(10, 573, 350, 37);
-		panel.add(panel_3);
-		panel_3.setLayout(null);
-		
-		JLabel lblNewLabel_3 = new JLabel("45 dk.");
-		lblNewLabel_3.setFont(new Font("Arial", Font.BOLD, 14));
-		lblNewLabel_3.setBounds(47, 11, 46, 14);
-		panel_3.add(lblNewLabel_3);
-		
-		JLabel lblNewLabel_4 = new JLabel("New label");
-		lblNewLabel_4.setBounds(10, 5, 27, 26);
-		panel_3.add(lblNewLabel_4);
-		lblNewLabel_4.setBackground(UIManager.getColor("textInactiveText"));
-		lblNewLabel_4.setIcon(new ImageIcon(BilgiEkrani.class.getResource("/Icons/saaticon.png")));
-		
-		JLabel lblNewLabel_6 = new JLabel("New label");
-		lblNewLabel_6.setBounds(219, 6, 27, 26);
-		panel_3.add(lblNewLabel_6);
-		lblNewLabel_6.setIcon(new ImageIcon(BilgiEkrani.class.getResource("/Icons/person.png")));
-		
-		JLabel lblNewLabel_5 = new JLabel("4 Kişilik");
-		lblNewLabel_5.setBounds(256, 11, 74, 14);
-		panel_3.add(lblNewLabel_5);
-		lblNewLabel_5.setFont(new Font("Arial", Font.BOLD, 14));
 		
 		JButton btn_Sonraki = new JButton("SONRAKİ");
 		btn_Sonraki.addMouseListener(new MouseAdapter() {
@@ -139,7 +120,7 @@ public class BilgiEkrani extends JFrame {
 		btn_Sonraki.setForeground(new Color(255, 255, 255));
 		btn_Sonraki.setFocusable(false);
 		btn_Sonraki.setIcon(new ImageIcon("C:\\Users\\pc\\Downloads\\icons8-arrow-24.png"));
-		btn_Sonraki.setBackground(new Color(64, 128, 128));
+		btn_Sonraki.setBackground(new Color(39,92,87));
 		btn_Sonraki.setBounds(769, 573, 128, 37);
 		panel.add(btn_Sonraki);
 		
@@ -157,7 +138,7 @@ public class BilgiEkrani extends JFrame {
 		btn_Kaydet.setFocusable(false);
 		btn_Kaydet.setHorizontalAlignment(SwingConstants.LEFT);
 		btn_Kaydet.setIcon(new ImageIcon(BilgiEkrani.class.getResource("/Icons/kaydet.png")));
-		btn_Kaydet.setBackground(new Color(64, 128, 128));
+		btn_Kaydet.setBackground(new Color(39,92,87));
 		btn_Kaydet.setBounds(611, 573, 128, 37);
 		panel.add(btn_Kaydet);
 		
@@ -166,13 +147,21 @@ public class BilgiEkrani extends JFrame {
 		panel.add(scrollPane);
 		
 		JTextArea txt_Aciklama = new JTextArea();
+		txt_Aciklama.setBackground(new Color(39,92,87));
+		txt_Aciklama.setForeground(new Color(230,230,230));
 		txt_Aciklama.setWrapStyleWord(true);
 		scrollPane.setViewportView(txt_Aciklama);
 		txt_Aciklama.setText(Islemler.BilgiAciklamasi(bilgiSistemi.getBilgiID()));//açıklamayı text'e ata
 		
 		
-		txt_Aciklama.setFont(new Font("Monospaced", Font.PLAIN, 13));
+		txt_Aciklama.setFont(new Font("Candara Light", Font.BOLD, 17));
 		txt_Aciklama.setLineWrap(true);
 		txt_Aciklama.setEditable(false);
+		
+		JLabel lblNewLabel = new JLabel("New label");
+		lblNewLabel.setBounds(0, 0, 984, 661);
+		lblNewLabel.setIcon(new ImageIcon(BilgiSistemi.class.getResource("/Gorseller/natural-marble-pattern-background2.png")));
+		panel.add(lblNewLabel);
+		panel.setComponentZOrder(lblNewLabel, panel.getComponentCount() - 1); // En alta yerleştir
 	}
 }

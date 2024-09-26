@@ -62,6 +62,7 @@ public class BilgiSistemi extends JFrame {
 		AnaBilgi.setIcon(new ImageIcon(BilgiSistemi.class.getResource("/Gorseller/Hoscakal.jpg")));
 		AnaBilgi.setHorizontalTextPosition(SwingConstants.LEADING);
 		JLabel lbl_BilgiAciklama = new JLabel("çok sessiz bir yer...");
+		lbl_BilgiAciklama.setHorizontalAlignment(SwingConstants.CENTER);
 		
 		
 		/*1.jpg denemesi*/
@@ -122,6 +123,7 @@ public class BilgiSistemi extends JFrame {
 			AnaBilgi.setIcon(new ImageIcon(
 					BilgiSistemi.class.getResource("/Gorseller/" + GunlukBilgiler[0] + ".jpg")));
 		
+			
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1000, 700);//Farklı çözünürlükler açısından 1366x768 max kabul edildi
@@ -144,6 +146,7 @@ public class BilgiSistemi extends JFrame {
 		panel.add(AnaBilgi);
 		
 		JLabel YeniBilgi = new JLabel("yeni bilgi");
+		YeniBilgi.setIcon(new ImageIcon(BilgiSistemi.class.getResource("/Gorseller/QuestionMark.jpg")));
 		YeniBilgi.setForeground(new Color(255, 255, 255));
 		YeniBilgi.setHorizontalAlignment(SwingConstants.CENTER);
 		YeniBilgi.setBorder(new LineBorder(new Color(255, 255, 255), 1, true));
@@ -151,6 +154,7 @@ public class BilgiSistemi extends JFrame {
 		panel.add(YeniBilgi);
 		
 		JLabel EskiBilgi = new JLabel("eski bilgi");
+		EskiBilgi.setIcon(new ImageIcon(BilgiSistemi.class.getResource("/Gorseller/QuestionMark.jpg")));
 		EskiBilgi.setForeground(new Color(255, 255, 255));
 		EskiBilgi.setHorizontalAlignment(SwingConstants.CENTER);
 		EskiBilgi.setBorder(new LineBorder(new Color(255, 255, 255)));
@@ -165,7 +169,7 @@ public class BilgiSistemi extends JFrame {
 		
 		JLabel lblNewLabel_3 = new JLabel("New label");
 		lblNewLabel_3.setIcon(new ImageIcon(BilgiSistemi.class.getResource("/Gorseller/arkaplanYesil2-edited.jpg")));
-		lblNewLabel_3.setBounds(10, 11, 964, 308);
+		lblNewLabel_3.setBounds(0, 0, 984, 330);
 		panel.add(lblNewLabel_3);
 		
 		JPanel panel_1 = new JPanel();
@@ -273,10 +277,9 @@ public class BilgiSistemi extends JFrame {
 		panel_1.add(check_zatenBiliniyor);
 		
 		
-		lbl_BilgiAciklama.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		lbl_BilgiAciklama.setForeground(new Color(64, 128, 128));
-		lbl_BilgiAciklama.setHorizontalAlignment(SwingConstants.CENTER);
-		lbl_BilgiAciklama.setBounds(175, 11, 570, 191);
+		lbl_BilgiAciklama.setFont(new Font("Tahoma", Font.BOLD, 24));
+		lbl_BilgiAciklama.setForeground(new Color(39, 92, 82));
+		lbl_BilgiAciklama.setBounds(36, 11, 907, 191);
 		panel_1.add(lbl_BilgiAciklama);
 		
 		JPanel btn_Kaydet = new JPanel();
@@ -293,8 +296,8 @@ public class BilgiSistemi extends JFrame {
 		btn_Kaydet.add(lbl_Kaydet);
 		
 		JLabel ArkaPlan_AltPanel = new JLabel("New label");
-		ArkaPlan_AltPanel.setIcon(new ImageIcon(BilgiSistemi.class.getResource("/Gorseller/natural-marble-pattern-background.jpg")));
-		ArkaPlan_AltPanel.setBounds(10, 11, 964, 308);
+		ArkaPlan_AltPanel.setIcon(new ImageIcon(BilgiSistemi.class.getResource("/Gorseller/natural-marble-pattern-background2.png")));
+		ArkaPlan_AltPanel.setBounds(0, 0, 984, 330);
 		panel_1.add(ArkaPlan_AltPanel);
 		
 		

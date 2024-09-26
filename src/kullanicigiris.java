@@ -66,11 +66,17 @@ public class kullanicigiris extends JFrame {
     }
 	void setColorkullanici (JPanel panel_renk,JPanel btn_giris) {
 		panel_renk.setBackground(new Color(39, 92, 82));
+		panel_renk.setForeground(new Color(255,255,255));
+		
 		btn_giris.setBackground( new Color(240,240,240));
+		btn_giris.setForeground(new Color(0,0,0));
     }
 	void setColoruye (JPanel panel_renk,JPanel btn_giris) {
 		panel_renk.setBackground(new Color(39, 92, 82));
+		panel_renk.setForeground(new Color(255,255,255));
+		
 		btn_giris.setBackground( new Color(240,240,240));
+		btn_giris.setForeground(new Color(0,0,0));
     }
 	
 
@@ -277,6 +283,7 @@ public class kullanicigiris extends JFrame {
 		panel_4.add(txt_aciklama);
 		
 		JPanel btn_giris = new JPanel();
+		btn_giris.setToolTipText("");
 		btn_giris.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mousePressed(MouseEvent e) {
