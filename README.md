@@ -3,7 +3,10 @@
 bilgileri içeren bir bilgi sistemi tasarlanmıştır. Sistemde kullanıcının ilgi alanlarına göre 
 bilgilerin depolanabildiği bir yapıya sahiptir. 
 
-100% java kullanılmıştır.
+OOP teknikleri kullanılarak java tabanlı bir masaüstü uygulama geliştirilmiştir.
+
+# Lisans
+No License
 
 # Arayüz Tasarımları
 ![image](https://github.com/user-attachments/assets/7eb313e6-11c2-4f82-b049-a3ef985be08f)
